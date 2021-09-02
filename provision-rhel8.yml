@@ -1,0 +1,31 @@
+---
+- hosts: all
+  gather_facts: False
+
+  vars:
+    key_name: hargrave-lab
+    region: us-west-2
+    image: ami-0ce5d70fd2e8a3ef6
+    id: hargrave-web-app
+    subnet: subnet-242cc86e
+    sec_group:  sg-0a21a3ef9bf4884c0
+
+  tasks:
+    - name: Provisioning EC2 instances
+      block:
+
+      - name: Provision instance(s)
+        ec2:
+          key_name: "{{ key_name }}"
+          id: "{{ id }}"
+          group_id: "{{ sg-0a21a3ef9bf4884c0 }}"
+          image: "{{ image }}"
+          instance_type: t2.micro
+          region: "{{ region }}"
+          vpc_subnet_id: "{{ subnet }}"
+          wait: true
+          assign_public_ip: yes
+          count: 1
+          instance_tags:
+            Name: "hargrave-web-app"
+            Owner: "Matt Hargrave"
