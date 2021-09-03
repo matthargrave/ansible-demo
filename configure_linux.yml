@@ -13,15 +13,12 @@
     - name: Gather Facts
       setup:
 
-    - name: Get Activation Key
-      include_vars: "secret.yml"
-
   - block:
     - name: Register with Subscription Manager
       redhat_subscription:
-      state: present
-      activationkey: "{{ secret.activationkey }}"
-      org_id: "{{ secret.org_id }}"
+        state: present
+        activationkey: "{{ secrets.activationkey }}"
+        org_id: "{{ secrets.org_id }}"
 
     - name: Install insights-client
       package:

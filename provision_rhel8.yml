@@ -7,6 +7,11 @@
     sec_group:  sg-0a21a3ef9bf4884c0
 
   tasks:
+    - name: Get Secrets
+      block:
+      - name: Get Activation Key
+        include_vars: "secret.yml"
+
     - name: Provisioning EC2 instances
       block:
 
@@ -28,7 +33,8 @@
             app: webdemo
         register: ec2
 
-      - name: Record Instance data
+      - name: Set data
         set_stats:
           data:
             ec2: '{{ ec2 }}'
+            secrets: '{{ secret }}'
