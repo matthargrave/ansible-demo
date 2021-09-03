@@ -17,8 +17,8 @@
     - name: Register with Subscription Manager
       redhat_subscription:
         state: present
-        activationkey: "{{ secrets.activationkey }}"
-        org_id: "{{ secrets.org_id }}"
+        activationkey: "{{ activationkey }}"
+        org_id: "{{ org_id }}"
 
     - name: Install insights-client
       package:
