@@ -19,7 +19,7 @@
           region: "{{ region }}"
           vpc_subnet_id: "{{ subnet }}"
           wait: true
-          assign_public_ip: yesc
+          assign_public_ip: yes
           count: 1
           instance_tags:
             Name: "{{ name }}"
