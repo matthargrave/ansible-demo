@@ -21,15 +21,6 @@
         org_id: "{{ org_id }}"
       become: yes
 
-    - name: enable default repos
-      rhsm_repository:
-        state: enabled
-        name: "{{ item }}"
-      loop:
-        - rhel-8-for-x86_64-baseos-rpms
-        - rhel-8-for-x86_64-appstream-rpms
-      become: yes
-
     - name: Install insights-client
       package:
         name: insights-client
