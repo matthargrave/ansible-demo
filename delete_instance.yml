@@ -5,7 +5,7 @@
   tasks:
   - name: Delete EC2 instances
     ec2:
-      id: '{{ ec2_id }}'
+      id: '{{ item.ec2_id | string }}'
       region: "{{ region }}"
       state: stopped
 
