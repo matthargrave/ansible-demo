@@ -38,4 +38,4 @@
           data:
             ec2: '{{ ec2 }}'
             activationkey: '{{ activationkey }}'
-            org_id: '{{ org-id }}'
+            org_id: '{{ orgid }}'
