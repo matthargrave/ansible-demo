@@ -29,6 +29,6 @@
         register: ec2
 
       - name: Record Instance id
-        set_stats:
-          data:
-            ec2_id: "{{ ec2[0].id }}"
+        debug:
+          var: ec2
+          verbosity: 2
