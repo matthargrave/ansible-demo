@@ -7,5 +7,5 @@
     ec2:
       instance_ids: '{{ ec2_id }}'
       region: "{{ region }}"
-      state: stopped
+      state: absent
 
