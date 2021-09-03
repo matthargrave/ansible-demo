@@ -27,5 +27,6 @@
           assign_public_ip: yes
           count: 1
           instance_tags:
-            Name: "hargrave-web-app"
+            Name: "{{ id }}"
             Owner: "Matt Hargrave"
+            mh_ansible: 1
