@@ -31,4 +31,3 @@
       - name: Record Instance id
         debug:
           var: ec2
-          verbosity: 2
