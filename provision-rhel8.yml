@@ -6,7 +6,7 @@
     key_name: hargrave-lab
     region: us-west-2
     image: ami-0ce5d70fd2e8a3ef6
-    id: hargrave-web-app
+    id: hargrave-web-app-2
     subnet: subnet-242cc86e
     sec_group:  sg-0a21a3ef9bf4884c0
 
@@ -17,7 +17,6 @@
       - name: Provision instance(s)
         ec2:
           key_name: "{{ key_name }}"
-          id: "{{ id }}"
           group_id: "{{ sec_group }}"
           image: "{{ image }}"
           instance_type: t2.micro
@@ -29,4 +28,4 @@
           instance_tags:
             Name: "{{ id }}"
             Owner: "Matt Hargrave"
-            mh_ansible: 1
+            ansible: 1
