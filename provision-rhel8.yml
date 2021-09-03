@@ -3,10 +3,7 @@
   gather_facts: False
 
   vars:
-    key_name: hargrave-lab
     region: us-west-2
-    image: ami-0ce5d70fd2e8a3ef6
-    id: hargrave-web-app-2
     subnet: subnet-242cc86e
     sec_group:  sg-0a21a3ef9bf4884c0
 
