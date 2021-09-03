@@ -23,6 +23,6 @@
           assign_public_ip: yes
           count: 1
           instance_tags:
-            Name: "{{ id }}"
+            Name: "{{ name }}"
             Owner: "Matt Hargrave"
             ansible: 1
