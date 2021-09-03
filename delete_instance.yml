@@ -3,7 +3,8 @@
   gather_facts: False
 
   tasks:
-    - name: Delete EC2 instances
+  - name: Delete EC2 instances
+    ec2:
       id: "{{ ec2_id  }}"
       state: stopped
 
