@@ -8,7 +8,7 @@
     image: ami-0ce5d70fd2e8a3ef6
     id: hargrave-web-app
     subnet: subnet-242cc86e
-    sec_group:  sg-0a21a3ef9bf4884c0
+    :  sg-0a21a3ef9bf4884c0
 
   tasks:
     - name: Provisioning EC2 instances
@@ -18,7 +18,7 @@
         ec2:
           key_name: "{{ key_name }}"
           id: "{{ id }}"
-          group_id: "{{ sg-0a21a3ef9bf4884c0 }}"
+          group_id: "{{ sec_group }}"
           image: "{{ image }}"
           instance_type: t2.micro
           region: "{{ region }}"
