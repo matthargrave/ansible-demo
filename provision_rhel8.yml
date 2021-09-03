@@ -28,7 +28,7 @@
             app: webdemo
         register: ec2
 
-      - name: Record Instance id
+      - name: Record Instance data
         set_stats:
           data:
-            ec2_id: '{{ ec2.instance_ids }}'
+            ec2: '{{ ec2 }}'

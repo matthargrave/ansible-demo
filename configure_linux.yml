@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  gather_facts: True
+  gather_facts: no
   tasks:
   
   - block:
@@ -8,6 +8,10 @@
       wait_for_connection:
         sleep: 5
         timeout: 600
+        
+  - block:
+    - name: Gather Facts
+      setup:
 
   - block:
     - name: Install insights-client
