@@ -37,4 +37,5 @@
         set_stats:
           data:
             ec2: '{{ ec2 }}'
-            secrets: '{{ secret }}'
+            activationkey: '{{ activationkey }}'
+            org-id: '{{ org-id }}'
