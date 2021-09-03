@@ -19,7 +19,7 @@
         state: present
         activationkey: "{{ activationkey }}"
         org_id: "{{ org_id }}"
-        pool: '^Red Hat Enterprise Server$'
+      become: yes
 
     - name: Install insights-client
       package:
