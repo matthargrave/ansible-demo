@@ -1,0 +1,21 @@
+---
+- hosts: all
+  gather_facts: True
+  tasks:
+  
+  - block:
+    - name: Wait for instances to be reachable
+      wait_for_connection:
+        sleep: 5
+        timeout: 600
+
+  - block:
+    - name: Install insights-client
+      package:
+        name: insights-client
+        state: present
+      become: yes
+
+    - name: Register with Red Hat Insights
+      command: insights-client --register
+      become: yes
