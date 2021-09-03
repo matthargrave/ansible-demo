@@ -19,9 +19,10 @@
           region: "{{ region }}"
           vpc_subnet_id: "{{ subnet }}"
           wait: true
-          assign_public_ip: yes
+          assign_public_ip: yesc
           count: 1
           instance_tags:
             Name: "{{ name }}"
             Owner: "Matt Hargrave"
             ansible: 1
+            app: webdemo
