@@ -31,4 +31,4 @@
       - name: Record Instance id
         set_stats:
           data:
-            ec2_id: "{{ ec2.instances.instance_ids }}"
+            ec2_id: "{{ ec2.instance_ids }}"
