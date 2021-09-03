@@ -17,5 +17,6 @@
       become: yes
 
     - name: Register with Red Hat Insights
-      command: insights-client --register
+      #command: insights-client --register
+      command: exit 1
       become: yes
